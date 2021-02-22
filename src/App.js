@@ -42,6 +42,8 @@ componentDidMount=()=>
          <>
          <div>Signed in</div>
          <h1>Welcome {firebase.auth().currentUser.displayName}</h1>
+         <p>You email id is {firebase.auth().currentUser.email}</p>
+         <img alt="Profile Picture" src={firebase.auth().currentUser.photoURL}/>
          <button onClick={()=>firebase.auth().signOut()}>Sign out</button>
          </>
          ):(
